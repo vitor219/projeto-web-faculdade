@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dados do Cliente</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cliente.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="logo">SorveteriaBeló</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Produtos</a></li>
+                    <li><a href="carrinho.html" class="cart-icon">
+                        Carrinho <span class="cart-count">0</span>
+                    </a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1 class="section-title">Dados do Cliente</h1>
+            
+            <div class="progresso-compra">
+                <div class="etapa concluida">
+                    <div class="etapa-numero">1</div>
+                    <div class="etapa-nome">Carrinho</div>
+                </div>
+                <div class="etapa ativa">
+                    <div class="etapa-numero">2</div>
+                    <div class="etapa-nome">Dados</div>
+                </div>
+                <div class="etapa">
+                    <div class="etapa-numero">3</div>
+                    <div class="etapa-nome">Pagamento</div>
+                </div>
+                <div class="etapa">
+                    <div class="etapa-numero">4</div>
+                    <div class="etapa-nome">Confirmação</div>
+                </div>
+            </div>
+            
+            <div class="cliente-form card">
+                <form id="form-cliente" onsubmit="salvarDadosCliente(event)">
+                    <div class="form-group">
+                        <label for="nome">Nome Completo*</label>
+                        <input type="text" id="nome" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">E-mail*</label>
+                        <input type="email" id="email" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="endereco">Endereço de Entrega*</label>
+                        <input type="text" id="endereco" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="cidade">Cidade*</label>
+                            <input type="text" id="cidade" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="estado">Estado*</label>
+                            <select id="estado" class="form-control" required>
+                                <option value="">Selecione...</option>
+                                <option value="AC">Acre</option>
+                                <option value="AL">Alagoas</option>
+                                <option value="AP">Amapá</option>
+                                <option value="AM">Amazonas</option>
+                                <option value="BA">Bahia</option>
+                                <option value="CE">Ceará</option>
+                                <option value="DF">Distrito Federal</option>
+                                <option value="ES">Espírito Santo</option>
+                                <option value="GO">Goiás</option>
+                                <option value="MA">Maranhão</option>
+                                <option value="MT">Mato Grosso</option>
+                                <option value="MS">Mato Grosso do Sul</option>
+                                <option value="MG">Minas Gerais</option>
+                                <option value="PA">Pará</option>
+                                <option value="PB">Paraíba</option>
+                                <option value="PR">Paraná</option>
+                                <option value="PE">Pernambuco</option>
+                                <option value="PI">Piauí</option>
+                                <option value="RJ">Rio de Janeiro</option>
+                                <option value="RN">Rio Grande do Norte</option>
+                                <option value="RS">Rio Grande do Sul</option>
+                                <option value="RO">Rondônia</option>
+                                <option value="RR">Roraima</option>
+                                <option value="SC">Santa Catarina</option>
+                                <option value="SP">São Paulo</option>
+                                <option value="SE">Sergipe</option>
+                                <option value="TO">Tocantins</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="cep">CEP*</label>
+                            <input type="text" id="cep" class="form-control" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="telefone">Telefone*</label>
+                        <input type="tel" id="telefone" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <a href="carrinho.html" class="btn btn-secondary">Voltar para o Carrinho</a>
+                        <button type="submit" class="btn btn-primary">Continuar para Pagamento</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Sobre Nós</h3>
+                    <p>Somos uma sorveteria dedicada a oferecer os melhores sabores com ingredientes de qualidade.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contato</h3>
+                    <p>Email: contato@sorveteriaBeló.com</p>
+                    <p>Telefone: (42) 12345-6789</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Horário de Funcionamento</h3>
+                    <p>Terça a Sexta: 10h às 22h</p>
+                    <p>Sábados e Domingos: 10h às 23h</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 SorveteriaBeló - Todos os direitos reservados</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/carrinho.js"></script>
+    <script src="js/cliente.js"></script>
+</body>
+</html>

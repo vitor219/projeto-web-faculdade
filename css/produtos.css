@@ -1,0 +1,119 @@
+/* Estilos específicos para a página de produtos */
+.produtos-filtro {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.btn-filtro {
+    background-color: transparent;
+    border: 2px solid var(--cor-primaria);
+    color: var(--cor-primaria);
+    padding: 8px 16px;
+    margin: 0 5px 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: var(--transicao-padrao);
+}
+
+.btn-filtro:hover, .btn-filtro.active {
+    background-color: var(--cor-primaria);
+    color: white;
+}
+
+.produtos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.produto-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.produto-img {
+    height: 200px;
+    overflow: hidden;
+}
+
+.produto-img-placeholder {
+    width: 100%;
+    height: 100%;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #999;
+    font-size: 0.9rem;
+}
+
+.produto-img-placeholder::after {
+    content: "Imagem do Produto";
+}
+
+.produto-info {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.produto-nome {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: var(--cor-secundaria);
+}
+
+.produto-descricao {
+    color: #666;
+    margin-bottom: 15px;
+    flex-grow: 1;
+}
+
+.produto-preco {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--cor-primaria);
+    margin-bottom: 15px;
+}
+
+.btn-adicionar {
+    align-self: stretch;
+}
+
+.notificacao {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--cor-sucesso);
+    color: white;
+    padding: 15px 25px;
+    border-radius: var(--borda-arredondada);
+    box-shadow: var(--sombra-padrao);
+    transform: translateY(100px);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.notificacao.show {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .produtos-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .produtos-grid {
+        grid-template-columns: 1fr;
+    }
+}

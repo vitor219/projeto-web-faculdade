@@ -1,0 +1,236 @@
+/* Estilos globais para o sistema da sorveteria */
+:root {
+    --cor-primaria: #ff6b6b; /* Vermelho claro */
+    --cor-secundaria: #cc5de8; /* Roxo */
+    --cor-terciaria: #f783ac; /* Rosa */
+    --cor-fundo: #f9f9f9;
+    --cor-texto: #333;
+    --cor-borda: #ddd;
+    --cor-destaque: #ff8787;
+    --cor-sucesso: #69db7c;
+    --cor-erro: #ff6b6b;
+    --sombra-padrao: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --borda-arredondada: 8px;
+    --transicao-padrao: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    background: linear-gradient(135deg, var(--cor-primaria), var(--cor-secundaria));
+    color: white;
+    padding: 20px 0;
+    box-shadow: var(--sombra-padrao);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.logo span {
+    color: var(--cor-terciaria);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    transition: var(--transicao-padrao);
+}
+
+nav ul li a:hover {
+    color: var(--cor-terciaria);
+}
+
+.cart-icon {
+    position: relative;
+    cursor: pointer;
+}
+
+.cart-count {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: var(--cor-terciaria);
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--cor-primaria);
+    color: white;
+    border: none;
+    border-radius: var(--borda-arredondada);
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transicao-padrao);
+}
+
+.btn:hover {
+    background-color: var(--cor-destaque);
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: var(--cor-secundaria);
+}
+
+.btn-secondary:hover {
+    background-color: #b650d3;
+}
+
+.btn-tertiary {
+    background-color: var(--cor-terciaria);
+}
+
+.btn-tertiary:hover {
+    background-color: #e67399;
+}
+
+.section-title {
+    text-align: center;
+    margin: 40px 0 20px;
+    color: var(--cor-primaria);
+    font-size: 2rem;
+}
+
+.card {
+    background-color: white;
+    border-radius: var(--borda-arredondada);
+    box-shadow: var(--sombra-padrao);
+    overflow: hidden;
+    transition: var(--transicao-padrao);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--borda-arredondada);
+    font-size: 1rem;
+    transition: var(--transicao-padrao);
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: var(--cor-secundaria);
+    box-shadow: 0 0 0 3px rgba(204, 93, 232, 0.2);
+}
+
+.alert {
+    padding: 15px;
+    border-radius: var(--borda-arredondada);
+    margin-bottom: 20px;
+}
+
+.alert-success {
+    background-color: var(--cor-sucesso);
+    color: white;
+}
+
+.alert-error {
+    background-color: var(--cor-erro);
+    color: white;
+}
+
+footer {
+    background-color: var(--cor-texto);
+    color: white;
+    padding: 30px 0;
+    margin-top: 50px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 300px;
+    margin-bottom: 20px;
+}
+
+.footer-section h3 {
+    margin-bottom: 15px;
+    color: var(--cor-terciaria);
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+    }
+    
+    nav ul {
+        margin-top: 20px;
+    }
+    
+    .footer-section {
+        min-width: 100%;
+    }
+}

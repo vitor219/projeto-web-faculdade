@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Produtos</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/produtos.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="container header-content">
+        <div class="logo">Sorveteria Beló</div>
+        <nav>
+          <ul>
+            <li><a href="index.html" class="active">Produtos</a></li>
+            <li>
+              <a href="carrinho.html" class="cart-icon">
+                Carrinho <span class="cart-count">0</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <h1 class="section-title">Nossos Sorvetes</h1>
+
+        <div class="produtos-filtro">
+          <button class="btn-filtro active" data-filter="todos">Todos</button>
+
+        </div>
+
+        <div class="produtos-grid">
+         
+          <div class="produto-card card" data-categoria="tradicional">
+            <div class="produto-img">
+              
+              <div class="produto-img-placeholder"></div>
+            </div>
+            <div class="produto-info">
+              <h3 class="produto-nome">Sorvete de Chocolate</h3>
+              <p class="produto-descricao">
+                Delicioso sorvete de chocolate cremoso.
+              </p>
+              <div class="produto-preco">R$ 12,90</div>
+              <button
+                class="btn btn-adicionar"
+                data-id="1"
+                data-nome="Sorvete de Chocolate"
+                data-preco="12.90"
+              >
+                Adicionar ao Carrinho
+              </button>
+            </div>
+          </div>
+
+          
+          <div class="produto-card card" data-categoria="tradicional">
+            <div class="produto-img">
+             
+              <div class="produto-img-placeholder"></div>
+            </div>
+            <div class="produto-info">
+              <h3 class="produto-nome">Sorvete de Morango</h3>
+              <p class="produto-descricao">
+                Sorvete de morango com pedaços da fruta.
+              </p>
+              <div class="produto-preco">R$ 12,90</div>
+              <button
+                class="btn btn-adicionar"
+                data-id="2"
+                data-nome="Sorvete de Morango"
+                data-preco="12.90"
+              >
+                Adicionar ao Carrinho
+              </button>
+            </div>
+          </div>
+
+        
+          <div class="produto-card card" data-categoria="tradicional">
+            <div class="produto-img">
+              
+              <div class="produto-img-placeholder"></div>
+            </div>
+            <div class="produto-info">
+              <h3 class="produto-nome">Sorvete de Baunilha</h3>
+              <p class="produto-descricao">
+                Clássico sorvete de baunilha cremoso.
+              </p>
+              <div class="produto-preco">R$ 11,90</div>
+              <button
+                class="btn btn-adicionar"
+                data-id="3"
+                data-nome="Sorvete de Baunilha"
+                data-preco="11.90"
+              >
+                Adicionar ao Carrinho
+              </button>
+            </div>
+          </div>
+
+          <!-- Produto 4 -->
+          <div class="produto-card card" data-categoria="especial">
+            <div class="produto-img">
+              <!-- Espaço para imagem -->
+              <div class="produto-img-placeholder"></div>
+            </div>
+            <div class="produto-info">
+              <h3 class="produto-nome">Sundae Especial</h3>
+              <p class="produto-descricao">
+                Sundae com calda, chantilly e confeitos.
+              </p>
+              <div class="produto-preco">R$ 18,90</div>
+              <button
+                class="btn btn-adicionar"
+                data-id="4"
+                data-nome="Sundae Especial"
+                data-preco="18.90"
+              >
+                Adicionar ao Carrinho
+              </button>
+            </div>
+          </div>
+
+          <!-- Produto 5 -->
+          <div class="produto-card card" data-categoria="especial">
+            <div class="produto-img">
+              <!-- Espaço para imagem -->
+              <div class="produto-img-placeholder"></div>
+            </div>
+            <div class="produto-info">
+              <h3 class="produto-nome">Açaí com Frutas</h3>
+              <p class="produto-descricao">
+                Açaí cremoso com mix de frutas frescas.
+              </p>
+              <div class="produto-preco">R$ 19,90</div>
+              <button
+                class="btn btn-adicionar"
+                data-id="5"
+                data-nome="Açaí com Frutas"
+                data-preco="19.90"
+              >
+                Adicionar ao Carrinho
+              </button>
+            </div>
+          </div>
+
+          
+          <div class="produto-card card" data-categoria="diet">
+            <div class="produto-img">
+             
+              <div class="produto-img-placeholder"></div>
+            </div>
+            <div class="produto-info">
+              <h3 class="produto-nome">Sorvete Diet de Coco</h3>
+              <p class="produto-descricao">
+                Sorvete sem açúcar, perfeito para dietas.
+              </p>
+              <div class="produto-preco">R$ 14,90</div>
+              <button
+                class="btn btn-adicionar"
+                data-id="6"
+                data-nome="Sorvete Diet de Coco"
+                data-preco="14.90"
+              >
+                Adicionar ao Carrinho
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>Sobre Nós</h3>
+            <p>
+              Somos uma sorveteria dedicada a oferecer os melhores sabores com
+              ingredientes de qualidade.
+            </p>
+          </div>
+          <div class="footer-section">
+            <h3>Contato</h3>
+            <p>Email: contato@sorveteriaBeló.com</p>
+            <p>Telefone: (42) 12345-6789</p>
+          </div>
+          <div class="footer-section">
+            <h3>Horário de Funcionamento</h3>
+            <p>Terça a Sexta: 10h às 22h</p>
+            <p>Sábados e Domingos: 10h às 23h</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 sorveteriaBeló - Todos os direitos reservados</p>
+        </div>
+      </div>
+    </footer>
+
+    <div id="notificacao" class="notificacao">
+      <p>Produto adicionado ao carrinho!</p>
+    </div>
+
+    <script src="js/produtos.js"></script>
+    <script src="js/carrinho.js"></script>
+  </body>
+</html>

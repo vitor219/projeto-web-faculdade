@@ -1,0 +1,136 @@
+/* Estilos específicos para a página de confirmação */
+.confirmacao-container {
+    padding: 30px;
+    margin-bottom: 50px;
+}
+
+.confirmacao-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid var(--cor-borda);
+}
+
+.confirmacao-icon {
+    width: 80px;
+    height: 80px;
+    background-color: var(--cor-sucesso);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+    flex-shrink: 0;
+}
+
+.confirmacao-mensagem h2 {
+    color: var(--cor-sucesso);
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.confirmacao-detalhes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid var(--cor-borda);
+}
+
+.detalhes-pedido h3, .detalhes-entrega h3, .confirmacao-itens h3 {
+    color: var(--cor-secundaria);
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.detalhe-item {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.detalhe-label {
+    font-weight: 600;
+}
+
+.detalhe-valor {
+    color: var(--cor-texto);
+}
+
+.status-confirmado {
+    color: var(--cor-sucesso);
+    font-weight: 600;
+}
+
+.entrega-info-item {
+    margin-bottom: 10px;
+}
+
+.entrega-info-label {
+    font-weight: 600;
+    margin-right: 5px;
+}
+
+.confirmacao-itens {
+    margin-bottom: 30px;
+}
+
+.confirmacao-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--cor-borda);
+}
+
+.confirmacao-item-info {
+    flex-grow: 1;
+}
+
+.confirmacao-item-nome {
+    font-weight: 600;
+}
+
+.confirmacao-item-detalhes {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.confirmacao-item-preco {
+    font-weight: 600;
+}
+
+.confirmacao-acoes {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .confirmacao-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .confirmacao-icon {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    
+    .confirmacao-detalhes {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .detalhe-item {
+        flex-direction: column;
+    }
+    
+    .detalhe-valor {
+        margin-top: 5px;
+    }
+}

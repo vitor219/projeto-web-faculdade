@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmação</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/confirmacao.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="logo">SorveteriaBeló</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Produtos</a></li>
+                    <li><a href="carrinho.html" class="cart-icon">
+                        Carrinho <span class="cart-count">0</span>
+                    </a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1 class="section-title">Pedido Confirmado</h1>
+            
+            <div class="progresso-compra">
+                <div class="etapa concluida">
+                    <div class="etapa-numero">1</div>
+                    <div class="etapa-nome">Carrinho</div>
+                </div>
+                <div class="etapa concluida">
+                    <div class="etapa-numero">2</div>
+                    <div class="etapa-nome">Dados</div>
+                </div>
+                <div class="etapa concluida">
+                    <div class="etapa-numero">3</div>
+                    <div class="etapa-nome">Pagamento</div>
+                </div>
+                <div class="etapa concluida ativa">
+                    <div class="etapa-numero">4</div>
+                    <div class="etapa-nome">Confirmação</div>
+                </div>
+            </div>
+            
+            <div class="confirmacao-container card">
+                <div class="confirmacao-header">
+                    <div class="confirmacao-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                        </svg>
+                    </div>
+                    <div class="confirmacao-mensagem">
+                        <h2>Seu pedido foi realizado com sucesso!</h2>
+                        <p>Obrigado por comprar na SorveteriaBeló. Você receberá um e-mail com os detalhes do seu pedido.</p>
+                    </div>
+                </div>
+                
+                <div class="confirmacao-detalhes">
+                    <div class="detalhes-pedido">
+                        <h3>Detalhes do Pedido</h3>
+                        <div class="detalhe-item">
+                            <span class="detalhe-label">Número do Pedido:</span>
+                            <span id="pedido-numero" class="detalhe-valor"></span>
+                        </div>
+                        <div class="detalhe-item">
+                            <span class="detalhe-label">Data:</span>
+                            <span id="pedido-data" class="detalhe-valor"></span>
+                        </div>
+                        <div class="detalhe-item">
+                            <span class="detalhe-label">Status:</span>
+                            <span id="pedido-status" class="detalhe-valor status-confirmado"></span>
+                        </div>
+                        <div class="detalhe-item">
+                            <span class="detalhe-label">Método de Pagamento:</span>
+                            <span id="pedido-metodo" class="detalhe-valor"></span>
+                        </div>
+                        <div class="detalhe-item">
+                            <span class="detalhe-label">Total:</span>
+                            <span id="pedido-total" class="detalhe-valor"></span>
+                        </div>
+                    </div>
+                    
+                    <div class="detalhes-entrega">
+                        <h3>Detalhes de Entrega</h3>
+                        <div id="entrega-info">
+                            <!-- Dados de entrega serão inseridos aqui via JavaScript -->
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="confirmacao-itens">
+                    <h3>Itens do Pedido</h3>
+                    <div id="confirmacao-lista-itens">
+                        <!-- Itens do pedido serão inseridos aqui via JavaScript -->
+                    </div>
+                </div>
+                
+                <div class="confirmacao-acoes">
+                    <a href="index.html" class="btn btn-primary">Voltar para a Loja</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Sobre Nós</h3>
+                    <p>Somos uma sorveteria dedicada a oferecer os melhores sabores com ingredientes de qualidade.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contato</h3>
+                    <p>Email: contato@sorveteriaBeló.com</p>
+                    <p>Telefone: (42) 12345-6789</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Horário de Funcionamento</h3>
+                    <p>Terça a Sexta: 10h às 22h</p>
+                    <p>Sábados e Domingos: 10h às 23h</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 SorveteriaBeló - Todos os direitos reservados</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/confirmacao.js"></script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+/* Estilos específicos para a página de dados do cliente */
+.progresso-compra {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0;
+    position: relative;
+}
+
+.progresso-compra::before {
+    content: '';
+    position: absolute;
+    top: 25px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--cor-borda);
+    z-index: 1;
+}
+
+.etapa {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    width: 25%;
+}
+
+.etapa-numero {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: white;
+    border: 2px solid var(--cor-borda);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    margin-bottom: 10px;
+    transition: var(--transicao-padrao);
+}
+
+.etapa-nome {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--cor-texto);
+}
+
+.etapa.concluida .etapa-numero {
+    background-color: var(--cor-sucesso);
+    border-color: var(--cor-sucesso);
+    color: white;
+}
+
+.etapa.ativa .etapa-numero {
+    background-color: var(--cor-primaria);
+    border-color: var(--cor-primaria);
+    color: white;
+}
+
+.cliente-form {
+    padding: 30px;
+    margin-bottom: 50px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 20px;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .progresso-compra {
+        flex-wrap: wrap;
+    }
+    
+    .etapa {
+        width: 50%;
+        margin-bottom: 20px;
+    }
+    
+    .progresso-compra::before {
+        display: none;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    
+    .form-actions {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .form-actions .btn {
+        width: 100%;
+    }
+}
